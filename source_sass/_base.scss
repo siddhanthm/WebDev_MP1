@@ -1,13 +1,366 @@
-@import url('http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather');
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url('http://weloveiconfonts.com/api/?family=brandico');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url("https://fonts.googleapis.com/css?family=Architects+Daughter");
 
-
-h1 {
-  font-size: 2.2rem;
-  color: lighten($orange, 25);
+@keyframes flag {
+    0%   {color: $green;}
+    5%   {color: $saffron;}
+    50%  {color: $blue;}
+    100% {color: $green;}
 }
 
-.test {
-  font-size: 1.2rem;
-  color: $blue;
+* {
+	margin :0;
+	padding: 0;
+	box-sizing: border-box;
+	border-style: solid;
+	height:100%;
+	width: 100%;
+}
+
+nav {
+	width:100%;
+	position:fixed; 
+	background-color: $black;
+	display: inline-block;
+	transition: all 1s ease;
+	z-index: 500;
+}
+
+.nav-values{
+	width: 80%;
+	@include margins();
+}
+
+.normal{
+	height: 60px;
+	vertical-align: middle;
+}
+
+.shrink{
+	height: 50px;
+	vertical-align: middle;
+}
+
+.nav-bar-item{
+	font-size: 1rem;
+	display: inline-block;
+	margin:0 auto;
+	padding-top: 20px;
+	width:19.5%;
+    text-align: center;
+    @include transition();
+
+    a{
+    	text-decoration:none;
+		color:white;
+    }
+}
+
+a.active{
+	color: rgb(255,223,0);
+	font-size:1.5rem;
+	@include transition();
+
+}
+
+.nav-bar-item:hover{
+	font-size:1.5rem;
+	@include transition();
+}
+
+section {
+	margin: 0 auto;
+	width: 100%;
+	padding: 50px;
+}
+
+.sections section:first-child {
+ 	margin-top: 60px;
+}
+
+.content_page{
+	height:100%;
+	background-color: white;
+}
+
+.heading{
+	height:30%;
+	font-size: 6rem;
+	text-align: center;
+}
+
+.Home{
+	height: 100%;
+	padding: 50px;
+	background-image: url("../media/MG.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 1rem;
+
+	a{
+		text-decoration: none;
+		padding-top: 550px;
+		color: black;
+	}
+}
+
+.Home-heading{
+	text-align:center;
+	font-family: 'Kaushan Script', cursive;
+	width:100%;
+	height:30%;
+	font-size:6rem;
+	@include animations(flag);
+}
+
+.Home-content{
+	text-align:center;
+	font-size: 1.3rem;
+}
+
+.control-row{
+	margin-top:8%;
+	height:70%;
+	width:100%;
+}
+.control-item{
+	width:33%;
+	display:inline-block;
+	margin:auto;
+
+	div{
+		height:20px;
+	}
+
+	img{
+		height:280px;
+		width:280px;
+		display: block;
+		margin-bottom: 50px;
+		border-radius:50%;
+		@include margins();
+	}
+}
+
+.control-item-f{
+	border-right-width:2px;
+	border-right-style:solid;
+}
+
+
+.control-heading{
+	font-family: 'Kaushan Script', cursive;
+	font-size:2.2rem;
+	text-align: center;
+}
+
+.control-name{
+	font-size:1.8rem;
+	margin-top: 50px;
+	text-align: center;
+}
+
+.india-intro{
+	@include background-img("../media/if.jpg");
+}
+
+.india-army{
+	@include background-img("../media/ia.jpeg");
+}
+
+.india-navy{
+	@include background-img("../media/in.jpg");
+}
+
+.india-air{
+	@include background-img("../media/iaf.jpg");
+}
+
+.air-force-heading{
+	font-family: 'Architects Daughter', cursive;
+	font-size:2.2rem;
+	color: black;
+	height: 10%;
+}
+
+.airforce-video-title{
+	font-family: 'Roboto';
+	font-size:2.0rem;
+	height: 40px;
+}
+.airforce-video{
+	height: 600px;
+	width: 70%;
+	display: block;
+	@include margins();
+}
+
+video{
+	max-width: 550px;
+	width: 550px;
+	max-height: 400px;
+	height: 400px;
+	display: block;
+	@include margins();
+	@include vertical_align();
+}
+
+.footer{
+	background-color:rgb(0, 51, 128);
+	height: 100px;
+	width:100%;
+	color: white;
+	font-size:1.3rem;
+}
+
+.footer_icons{
+	width: 70%;
+	height: 20px;
+  	display: block;
+  	@include margins();
+  	@include vertical_align();
+  	a{
+  		text-decoration: none;
+		color:white;	
+  	}
+}
+
+a.brandico-facebook{
+	margin-left:20%;
+}
+
+a.brandico-facebook:hover{
+	color:$saffron;
+}
+
+a.brandico-linkedin{
+	margin-left:25%;
+}
+
+a.brandico-github{
+	margin-left:25%;
+}
+
+a.brandico-github:hover{
+	color:$green;
+}
+
+[class*="brandico-"]:before {
+	font-family: 'brandico', sans-serif;
+}
+
+.content{
+	font-family: 'Roboto';
+	font-size: 1.5rem;
+	padding: 50px;
+
+	a.close{
+		margin-top: 40px;
+		display: block;
+		width: 30px;
+		height: 30px;
+		text-decoration: none;
+		color:#A9A9A9;
+		font-size: 1rem;
+		@include margins();
+		@include transition();
+	}
+	a:hover{
+		color:black;
+		font-size: 1.3rem;
+	}
+}
+
+.army_pic{
+	img{
+		margin-top: 30px;
+		width: 70%;
+		max-width: 70%;
+		height: 500px;
+		max-height: 500px;
+		display: block;
+		box-shadow:4px 4px 28px #000;
+		@include margins();
+	}
+}
+
+.window{
+	position: fixed;
+	z-index: 10000;
+	width: 50%;
+	height: 50%;
+	margin-left: -25%;
+	margin-top: -25%;
+	left: -1000px;
+	top:-1000px;
+	background-color:white;
+	box-shadow:4px 4px 80px #000;
+}
+
+.blind{
+	position:fixed;
+   	z-index:9999;
+   	top:0;
+   	left:0;
+   	width:100%;
+   	height:100%;
+   	background-color:$black;
+}
+
+.carouselbox{
+	width: 80%;
+	height: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	z-index: 100;
+	box-shadow:4px 4px 80px #000;
+
+	ol{
+		width: 89%;
+		display: inline-block;
+	}
+}
+
+.fa-arrow-left{
+	width: 5%;
+	display: inline-block;
+	text-align: center;
+	float: left;
+	margin-top: 25%;
+}
+
+
+.fa-arrow-right{
+	width: 5%;
+	display: inline-block;
+	text-align: center;
+	float: right;
+	margin-top: 25%;
+}
+
+.curr {
+	position: absolute;
+	visibility: hidden;
+	transform: scale(0);
+	transition: 1s;
+}
+
+.curr img {
+	width: 66%;
+	height: 68.7%;
+}
+
+.visible {
+	visibility: visible;
+	transform: scale(1);
+	transition: 1s;
+}
+
+.visible img {
+	width: 66%;
+	height: 68.7%;
 }
