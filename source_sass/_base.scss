@@ -326,20 +326,16 @@ a.brandico-github:hover{
 }
 
 .fa-arrow-left{
-	width: 5%;
-	display: inline-block;
-	text-align: center;
+	@include icons();
 	float: left;
-	margin-top: 25%;
+
 }
 
 
 .fa-arrow-right{
-	width: 5%;
-	display: inline-block;
-	text-align: center;
+	@include icons();
 	float: right;
-	margin-top: 25%;
+
 }
 
 .curr {
@@ -347,20 +343,18 @@ a.brandico-github:hover{
 	visibility: hidden;
 	transform: scale(0);
 	transition: 1s;
-}
-
-.curr img {
-	width: 66%;
-	height: 68.7%;
+	img{
+		width: 66%;
+		height: 68.7%;
+	}
 }
 
 .visible {
 	visibility: visible;
 	transform: scale(1);
 	transition: 1s;
-}
-
-.visible img {
-	width: 66%;
-	height: 68.7%;
+	img{
+		width: 66%;
+		height: 68.7%;
+	}
 }
