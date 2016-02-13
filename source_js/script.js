@@ -77,7 +77,6 @@ $(document).ready(function() {
 		current = items[counter];
 		$(current).addClass("visible");
 	});   
-
 });
 
 
