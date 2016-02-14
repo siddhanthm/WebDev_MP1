@@ -17,7 +17,7 @@
 	box-sizing: border-box;
 	border-style: solid;
 	height:100%;
-	max-width: 100%;
+	width: 100%;
 }
 
 nav {
@@ -314,15 +314,17 @@ a.brandico-github:hover{
 .carouselbox{
 	width: 80%;
 	height: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	@include margins();
 	display: block;
-	z-index: 100;
-	box-shadow:4px 4px 80px #000;
 
 	ol{
 		width: 89%;
 		display: inline-block;
+
+		li{
+			width: 66%;
+			height: 71%;
+		}
 	}
 }
 
@@ -344,9 +346,10 @@ a.brandico-github:hover{
 	visibility: hidden;
 	transform: scale(0);
 	transition: 1s;
+	width: 100%;
 	img{
-		width: 66%;
-		height: 68.7%;
+		width: 100%;
+		height: 100%;
 	}
 }
 
@@ -354,8 +357,9 @@ a.brandico-github:hover{
 	visibility: visible;
 	transform: scale(1);
 	transition: 1s;
+	width: 100%;
 	img{
-		width: 66%;
-		height: 68.7%;
+		width: 100%;
+		height: 100%;
 	}
 }
